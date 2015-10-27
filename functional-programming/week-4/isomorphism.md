@@ -29,7 +29,7 @@ In OCaml: a type, `bool`{.ocaml} for example, represents the set of all the valu
 
 A function 'maps' between two sets. The first set contains all the possible input values to the function, and the second set contains all the possible output values 
 
-note: these sets may be infinite, for example [big integers](http://caml.inria.fr/pub/docs/manual-ocaml/libref/Big_int.html) which have no upper or lower limit (in theory, but in practice limited by available RAM).
+Note: these sets may be infinite, for example [big integers](http://caml.inria.fr/pub/docs/manual-ocaml/libref/Big_int.html) which have no upper or lower limit (in theory, but in practice limited by available RAM).
 
 # First Example #
 
@@ -79,13 +79,13 @@ Alternative:
 ```ocaml
 let encodeV2 f = (f 2, f 1);;
 
-let decode (f_when_given_2, f_when_given_1) = function
+let decodeV2 (f_when_given_2, f_when_given_1) = function
   | 1 -> f_when_given_1
   | 2 -> f_when_given_2
 ;;
 ```
 
-For any pair of bools, this now holds:
+For any pair of `bool`{.ocaml}s, this now holds:
 ```ocaml
 encode (decode pair_of_bools) == pair_of_bools;;
 
@@ -116,4 +116,6 @@ let dec (a, b) =
   | false -> b in
   f;;
 ```
+
+See my notes on currying in this repository (in `functional-programming/misc`) to get a better understanding of why `dec` was written this way.
 
