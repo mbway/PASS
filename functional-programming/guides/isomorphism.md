@@ -33,7 +33,7 @@ Note: these sets may be infinite, for example [big integers](http://caml.inria.f
 
 # First Example #
 
-![image: res/example.png](res/example.png)
+![image: res/isomorphism/example.png](res/isomorphism/example.png)
 
 (note: I am avoiding writing a `bool -> bool`{.ocaml} function because then it is harder to see whether I'm talking about the input set or the output set. To apply this to the exercise questions, mentally replace `1` with `false` and `2` with `true`)
 
